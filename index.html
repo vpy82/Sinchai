@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Irrigation Records</title>
+    <link rel="stylesheet" href="styles.css">
+<style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+</style></head>
+<body>
+    <h1>Customer Irrigation Records</h1>
+    <table id="irrigation-table">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Irrigation Record</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScript will insert data here -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">document.addEventListener('DOMContentLoaded', () => {
+    const customers = [
+        { name: 'Customer 1', record: 'Record 1' },
+        { name: 'Customer 2', record: 'Record 2' },
+        { name: 'Customer 3', record: 'Record 3' },
+        { name: 'Customer 4', record: 'Record 4' },
+        { name: 'Customer 5', record: 'Record 5' },
+        { name: 'Customer 6', record: 'Record 6' },
+        { name: 'Customer 7', record: 'Record 7' },
+        { name: 'Customer 8', record: 'Record 8' },
+        { name: 'Customer 9', record: 'Record 9' },
+        { name: 'Customer 10', record: 'Record 10' },
+        { name: 'Customer 11', record: 'Record 11' },
+        { name: 'Customer 12', record: 'Record 12' },
+        { name: 'Customer 13', record: 'Record 13' },
+        { name: 'Customer 14', record: 'Record 14' },
+        { name: 'Customer 15', record: 'Record 15' },
+        { name: 'Customer 16', record: 'Record 16' },
+        { name: 'Customer 17', record: 'Record 17' },
+        { name: 'Customer 18', record: 'Record 18' },
+        { name: 'Customer 19', record: 'Record 19' },
+        { name: 'Customer 20', record: 'Record 20' },
+    ];
+
+    const tableBody = document.querySelector('#irrigation-table tbody');
+
+    customers.forEach(customer => {
+        const row = document.createElement('tr');
+        const nameCell = document.createElement('td');
+        const recordCell = document.createElement('td');
+
+        nameCell.textContent = customer.name;
+        recordCell.textContent = customer.record;
+
+        row.appendChild(nameCell);
+        row.appendChild(recordCell);
+
+        tableBody.appendChild(row);
+    });
+});
+</script></body></html>
